@@ -8,8 +8,6 @@ namespace ZenjectExample.Installers
     {
         public override void InstallBindings()
         {
-            // Container.BindFactory<Transform, IMover, MoveWithTranslatePlaceHolderFactory>()
-            //     .FromFactory<MoveWithTranslateFactory>();
             Container.Bind<IMover>().To<MoveWithTranslate>().AsTransient().Lazy();
         }
     }
