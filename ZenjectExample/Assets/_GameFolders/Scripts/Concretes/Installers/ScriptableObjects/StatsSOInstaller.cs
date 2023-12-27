@@ -9,6 +9,7 @@ namespace ZenjectExample.ScriptableObjects.Installer
         [SerializeField] EntityStatsSO _playerStats;
         [SerializeField] EntityStatsSO _slowEnemyStats;
         [SerializeField] EntityStatsSO _fastEnemyStats;
+        [SerializeField] EnemySpawnerStatsSO _enemySpawnerStats;
 
         public override void InstallBindings()
         {
@@ -18,6 +19,7 @@ namespace ZenjectExample.ScriptableObjects.Installer
             Container.Bind<IEntityStats>().WithId("Player").To<EntityStatsSO>().FromInstance(_playerStats);
             Container.Bind<IEntityStats>().WithId("SlowEnemy").To<EntityStatsSO>().FromInstance(_slowEnemyStats);
             Container.Bind<IEntityStats>().WithId("FastEnemy").To<EntityStatsSO>().FromInstance(_fastEnemyStats);
+            Container.Bind<IEnemySpawnerStats>().WithId("EnemySpawner").To<EnemySpawnerStatsSO>().FromInstance(_enemySpawnerStats);
         }
     }    
 }
