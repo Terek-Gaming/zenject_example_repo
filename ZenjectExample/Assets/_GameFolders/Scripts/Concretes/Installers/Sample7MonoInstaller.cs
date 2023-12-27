@@ -11,7 +11,7 @@ namespace ZenjectExample.Installers
         
         public override void InstallBindings()
         {
-            Container.BindFactory<AiEntityController, EnemyPrefabFactory>().FromComponentInNewPrefab(_prefab);
+            Container.BindFactory<AiEntityController, EnemyPrefabFactoryPlaceHolder>().FromComponentInNewPrefab(_prefab);
             Container.Bind<IMoveFactory>().To<SimpleMoveFactory>().AsSingle().Lazy();
         }
     }

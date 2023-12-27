@@ -1,14 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 using ZenjectExample.Factories;
 using ZenjectExample.ScriptableObjects;
 
 namespace ZenjectExample.Controllers
 {
-    public class SpawnerController : MonoBehaviour
+    public class SpawnerController_1 : MonoBehaviour
     {
         [Inject(Id = "EnemySpawner")] IEnemySpawnerStats _stats;
-        [Inject] EnemyPrefabFactoryPlaceHolder _enemyPrefabFactory;
+        [Inject] EnemyPrefabFactory1PlaceHolder _enemyPrefabFactory;
 
         float _currentTime = 0f;
 
