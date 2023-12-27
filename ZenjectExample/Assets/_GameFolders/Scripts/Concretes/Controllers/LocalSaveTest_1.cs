@@ -5,7 +5,7 @@ namespace ZenjectExample.Controllers
 {
     public class LocalSaveTest_1 : MonoBehaviour
     {
-        [Zenject.Inject(Id="Local")]public ISaveLoadService SaveLoadService { get; private set; }
+        [Zenject.Inject(Id=ConstNamesHelper.LOCAL)]public ISaveLoadService SaveLoadService { get; private set; }
         
         [ContextMenu(nameof(SaveData))]
         public void SaveData()

@@ -12,13 +12,13 @@ namespace ZenjectExample.DataAccessLayers
         {
             await Task.Yield();
             _index++;
-            Debug.Log("Data saved on local side => " + _index);
+            Debug.Log("Data saved on cloud side => " + _index);
         }
 
         public async Task<T> LoadDataAsync<T>(string key)
         {
             await Task.Yield();
-            Debug.Log("Data loaded on local side " + _index);
+            Debug.Log("Data loaded on cloud side " + _index);
 
             return default;
         }
