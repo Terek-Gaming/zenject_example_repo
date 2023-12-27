@@ -1,31 +1,31 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 using ZenjectExample.Abstracts.Movements;
-using ZenjectExample.Factories;
 
 namespace ZenjectExample.Controllers
 {
-    public class AiEntityController : MonoBehaviour
+    public class AiEntityController_3 : MonoBehaviour
     {
         [SerializeField] Vector2 _startPosition;
         [SerializeField] Vector2 _endPosition;
-        [SerializeField] protected Transform _transform;
+        [SerializeField] Transform _transform;
 
-        protected Vector2 _direction;
-        protected IMover _mover;
+        Vector2 _direction;
+        IMover _mover;
 
         [Inject]
-        public void Constructor(IMoveFactory moverFactory)
+        public void Constructor(IMover mover)
         {
-            _mover = moverFactory.Create(_transform);
+            _mover = mover;
+            _mover.SetTranslate(_transform);
         }
-        
+
         void OnValidate()
         {
             if (_transform == null) _transform = GetComponent<Transform>();
         }
 
-        protected virtual void Start()
+        void Start()
         {
             _direction = _startPosition;
         }
