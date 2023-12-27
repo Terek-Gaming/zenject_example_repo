@@ -4,7 +4,7 @@ using ZenjectExample.Abstracts.Movements;
 
 namespace ZenjectExample.Controllers
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController_1 : MonoBehaviour
     {
         [Zenject.Inject] public IInputReader InputReader { get; private set; }
         [Zenject.Inject] public IMover Mover { get; private set; }

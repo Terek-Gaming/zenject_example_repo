@@ -19,6 +19,14 @@ namespace ZenjectExample.Controllers
         {
             _mover = moverFactory.Create(_transform);
         }
+        
+        //sample 2
+        // [Inject]
+        // public void Constructor(IMover mover)
+        // {
+        //     _mover = mover;
+        //     _mover.SetTranslate(_transform);
+        // }
 
         void OnValidate()
         {
