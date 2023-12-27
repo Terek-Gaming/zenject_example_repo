@@ -2,6 +2,7 @@ using UnityEngine;
 using Zenject;
 using ZenjectExample.Abstracts.Movements;
 using ZenjectExample.Factories;
+using ZenjectExample.ScriptableObjects;
 
 namespace ZenjectExample.Controllers
 {
@@ -38,7 +39,17 @@ namespace ZenjectExample.Controllers
             _direction = _startPosition;
         }
 
-        void Update()
+        protected virtual void Update()
+        {
+            MoveInputProcess();
+        }
+
+        void FixedUpdate()
+        {
+            _mover.FixedTick();
+        }
+
+        protected void MoveInputProcess(float speed = 1f)
         {
             if (Vector2.Distance(_direction, _transform.position) < 0.1f)
             {
@@ -48,12 +59,7 @@ namespace ZenjectExample.Controllers
             Vector2 direction = _direction - (Vector2)_transform.position;
             direction = direction.normalized;
             
-            _mover.Tick(direction);
-        }
-
-        void FixedUpdate()
-        {
-            _mover.FixedTick();
+            _mover.Tick(direction * speed);
         }
     }
 }

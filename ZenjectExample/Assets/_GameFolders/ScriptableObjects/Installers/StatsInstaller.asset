@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d135dae009a6844a215f86d0b57932, type: 3}
+  m_Name: StatsInstaller
+  m_EditorClassIdentifier: 
+  _playerStats: {fileID: 11400000, guid: d90b45e64e85dc84cb75bdceeafa0374, type: 2}
+  _slowEnemyStats: {fileID: 11400000, guid: fde6138b5a9bf5e41bd5abfed1b7510f, type: 2}
+  _fastEnemyStats: {fileID: 11400000, guid: 7e7e2ef8f0ec3264b8f450572122925c, type: 2}
