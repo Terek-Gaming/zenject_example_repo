@@ -1,9 +1,7 @@
 ﻿using Zenject;
 using ZenjectExample.Abstracts.Inputs;
-using ZenjectExample.Abstracts.Movements;
 using ZenjectExample.Factories;
 using ZenjectExample.Inputs;
-using ZenjectExample.Movements;
 
 namespace ZenjectExample.Installers
 {
