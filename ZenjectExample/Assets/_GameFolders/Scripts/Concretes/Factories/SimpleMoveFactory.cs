@@ -11,6 +11,14 @@ namespace ZenjectExample.Factories
             return new MoveWithTranslate(transform);
         }
     }
+    
+    public class SimpleMoveRigidBodyFactory : IMoveFactory
+    {
+        public IMover Create(Transform transform)
+        {
+            return new MoveWithRigidBody(transform);
+        }
+    }
 
     public interface IMoveFactory
     {
