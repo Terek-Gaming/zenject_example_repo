@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using ZenjectExample.Abstracts.Inputs;
 using ZenjectExample.Abstracts.Movements;
@@ -23,6 +22,6 @@ namespace ZenjectExample.Controllers
         {
             Mover.FixedTick();
         }
-    }    
+    }
 }
 

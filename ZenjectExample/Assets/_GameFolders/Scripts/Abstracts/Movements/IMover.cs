@@ -6,5 +6,6 @@ namespace ZenjectExample.Abstracts.Movements
     {
         void Tick(Vector2 direction);
         void FixedTick();
+        void SetTranslate(Transform transform);
     }
 }

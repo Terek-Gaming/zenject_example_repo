@@ -6,14 +6,14 @@ using ZenjectExample.Movements;
 
 namespace ZenjectExample.Installers
 {
-    public class PlayerMonoInstaller : MonoInstaller
+    public class Sample1MonoInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
             Container.Bind<IInputReader>().To<NewInputReader>().AsSingle().NonLazy();
             //Container.Bind<IInputReader>().To<OldInputReader>().AsSingle().NonLazy(); 
-            Container.Bind<IMover>().To<MoveWithTranslate>().AsCached().Lazy();
-            //Container.Bind<IMover>().To<MoveWithRigidBody>().AsCached().Lazy();
+            Container.Bind<IMover>().To<MoveWithTranslate>().AsTransient().Lazy();
+            //Container.Bind<IMover>().To<MoveWithRigidBody>().AsTransient().Lazy();
         }
-    }    
+    }
 }

@@ -6,7 +6,7 @@ namespace ZenjectExample.Movements
     public class MoveWithRigidBody : IMover
     {
         readonly float _speed = 5f;
-        readonly Rigidbody2D _rigidbody2D;
+        Rigidbody2D _rigidbody2D;
         
         Vector2 _movement;
 
@@ -23,6 +23,11 @@ namespace ZenjectExample.Movements
         public void FixedTick()
         {
             _rigidbody2D.velocity = _movement;
+        }
+
+        public void SetTranslate(Transform transform)
+        {
+            _rigidbody2D = transform.GetComponent<Rigidbody2D>();
         }
     }
 }
