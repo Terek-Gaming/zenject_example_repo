@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: EnemySpawnerStats
   m_EditorClassIdentifier: 
   _maxTime: 1
+  _maxEnemyCount: 10

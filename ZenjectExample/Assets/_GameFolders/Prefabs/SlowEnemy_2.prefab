@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4062677381755562529}
-  - component: {fileID: 7789770395576232855}
+  - component: {fileID: -7473647287594278976}
   m_Layer: 0
-  m_Name: SlowEnemy
+  m_Name: SlowEnemy_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 4539934158516400692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7789770395576232855
+--- !u!114 &-7473647287594278976
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2549595171411228691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96dd83388fb5452a8a4b9e0a40240954, type: 3}
+  m_Script: {fileID: 11500000, guid: 57cde430bc6741d285a8c55db6211a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _startPosition: {x: 0, y: 0}
