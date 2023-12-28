@@ -1,4 +1,5 @@
 using UnityEngine;
+using ZenjectExample.Abstracts.Controllers;
 using ZenjectExample.Abstracts.Inputs;
 using ZenjectExample.Abstracts.Movements;
 using ZenjectExample.Factories;
@@ -6,7 +7,7 @@ using ZenjectExample.ScriptableObjects;
 
 namespace ZenjectExample.Controllers
 {
-    public class PlayerController_3 : MonoBehaviour
+    public class PlayerController_3 : MonoBehaviour, IPlayerController
     {
         IInputReader _inputReader;
         IMover _mover;

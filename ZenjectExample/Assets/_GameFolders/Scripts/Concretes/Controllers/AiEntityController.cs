@@ -15,7 +15,7 @@ namespace ZenjectExample.Controllers
         protected IMover _mover;
 
         [Inject]
-        public void Constructor(IMoveFactory moverFactory)
+        protected virtual void Constructor(IMoveFactory moverFactory)
         {
             _mover = moverFactory.Create(_transform);
         }
