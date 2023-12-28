@@ -15,9 +15,10 @@ namespace ZenjectExample.Installers
         {
             Container.Bind<IInputReader>().To<NewInputReader>().AsSingle().NonLazy();
             Container.Bind<IPlayerController>().FromComponentInHierarchy().AsSingle().Lazy();
-            Container.Bind<IEnemyPrefabHolder>().To<EnemyPrefabHolderSO>().FromMethod(context => 
-                    LoadScriptableObjectFromResources<EnemyPrefabHolderSO>("EnemyPrefabHolder"))
-                .AsSingle();
+            // Container.Bind<IEnemyPrefabHolder>().To<EnemyPrefabHolderSO>().FromMethod(context => 
+            //         LoadScriptableObjectFromResources<EnemyPrefabHolderSO>("EnemyPrefabHolder"))
+            //     .AsSingle();
+            Container.Bind<IEnemyPrefabHolder>().To<EnemyPrefabHolderSO>().FromResource("EnemyPrefabHolder").AsSingle();
             Container.BindFactory<AiEntityController, EnemyPrefabFactory1PlaceHolder>()
                 .FromFactory<EnemyPrefabFactory_1>();
             
@@ -26,6 +27,7 @@ namespace ZenjectExample.Installers
         
         private T LoadScriptableObjectFromResources<T>(string resourcePath) where T : ScriptableObject
         {
+            //flexible can change with addressables
             return Resources.Load<T>(resourcePath);
         }
     }
