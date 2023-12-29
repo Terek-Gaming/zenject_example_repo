@@ -11,7 +11,7 @@ namespace ZenjectExample.Managers
         {
             _saveLoadDal.SaveDataAsync(key, value);
         }
-
+        
         public T LoadData<T>(string key)
         {
             return _saveLoadDal.LoadDataAsync<T>(key).ConfigureAwait(false).GetAwaiter().GetResult();
